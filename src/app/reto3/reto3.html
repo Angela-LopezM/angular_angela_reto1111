@@ -1,0 +1,20 @@
+<h1>REGISTRO DE ESTUDIANTES</h1>
+<form (ngSubmit)="registrarEstudiante()">
+  <label>Nombre:</label>
+  <input type="text" [(ngModel)]="nombre" name="nombre" placeholder="Ingrese el nombre">
+  <label>Programa:</label>
+  <input type="text" [(ngModel)]="programa" name="programa" placeholder="Ingrese el programa">
+  <label>Edad:</label>
+  <input type="number" [(ngModel)]="edad" name="edad" placeholder="Ingrese la edad">
+  <button type="submit">Registrar</button>
+</form>
+<p>{{ mensaje }}</p>
+<h2>Estudiantes registrados</h2>
+@for (estudiante of estudiantes; track $index) {
+  <h3>{{ estudiante.nombre }}</h3>
+  <p>Programa: {{ estudiante.programa }}</p>
+  <p>Edad: {{ estudiante.edad }}</p>
+}
+@empty {
+  <p>No hay estudiantes registrados.</p>
+}

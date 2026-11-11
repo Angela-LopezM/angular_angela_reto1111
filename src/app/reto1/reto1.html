@@ -1,0 +1,12 @@
+<h1>CALCULADORA DE 2 NUMEROS</h1>
+<label>PRIMER NUMERO: </label>
+<input type="number" [(ngModel)]="num1" placeholder="Ingrese un numero">
+<label>SEGUNDO NUMERO: </label>
+<input type="number" [(ngModel)]="num2" placeholder="Ingrese un numero">
+<br>
+<h2>OPERACIONES</h2>
+<button (click)="suma()">Sumar</button>
+<button (click)="resta()">Restar</button>
+
+<h3>Resultado: {{resultado ?? 'Sin resultado'}}</h3>
+<p>{{mensaje}}</p>
